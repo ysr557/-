@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>我的个人网站</title>
+    <meta name="description" content="个人网站：摄影作品、简历与社交入口" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="loading" id="loading" aria-hidden="true">
+      <div class="loading__mark"></div>
+    </div>
+
+    <header class="nav" id="nav">
+      <a class="nav__title" href="#home" aria-label="回到首页">
+        <span class="nav__round" aria-hidden="true">
+          <span class="nav__small-round"></span>
+        </span>
+        <span class="nav__name">
+          <span id="profileName">James</span><span class="nav__name-grey">.个人站</span>
+        </span>
+      </a>
+
+      <nav class="nav__menu" aria-label="站点导航">
+        <ul class="nav__list nav__list--horizontal" id="navList">
+          <li class="nav__item is-active"><a class="nav__link" href="#home">首页</a></li>
+          <li class="nav__item"><a class="nav__link" href="#works">作品</a></li>
+          <li class="nav__item"><a class="nav__link" href="#resume">简历</a></li>
+          <li class="nav__item"><a class="nav__link" href="#links">链接</a></li>
+          <li class="nav__item nav__item--button" id="navToggle">
+            <button class="nav__toggle" type="button" aria-label="打开菜单" aria-expanded="false">
+              <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" focusable="false">
+                <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </button>
+          </li>
+          <div class="nav__slider" id="navSlider" aria-hidden="true"></div>
+        </ul>
+
+        <ul class="nav__list nav__list--vertical" id="navListMobile" hidden>
+          <li class="nav__item"><a class="nav__link" href="#home">首页</a></li>
+          <li class="nav__item"><a class="nav__link" href="#works">作品</a></li>
+          <li class="nav__item"><a class="nav__link" href="#resume">简历</a></li>
+          <li class="nav__item"><a class="nav__link" href="#links">链接</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="page">
+      <section class="section section--hero" id="home">
+        <div class="container">
+          <div class="hero">
+            <div class="hero__left">
+              <div class="profile-chip reveal">
+                <img class="avatar" id="profileAvatar" alt="个人头像" />
+                <span class="profile-chip__text">
+                  <span class="profile-chip__name" id="profileNameInline">James</span>
+                  <span class="profile-chip__hint">欢迎来到我的个人站</span>
+                </span>
+              </div>
+              <p class="kicker reveal">摄影 · 写作</p>
+              <h1 class="headline reveal">
+                <span class="headline__strong">把影像与文字</span>
+                <span class="headline__soft">放进同一个节奏里</span>
+              </h1>
+              <p class="lead reveal" id="profileBio">
+                这里放你的简介：你拍什么、写什么、在乎什么。保持短句、留白、节奏感。
+              </p>
+              <div class="hero__cta reveal">
+                <a class="btn btn--primary" href="#works">查看摄影作品</a>
+                <a class="btn btn--ghost" id="xhsCta" href="#links">小红书</a>
+              </div>
+            </div>
+
+            <div class="hero__right reveal">
+              <div class="hero-card">
+                <div class="hero-card__media" id="heroMedia"></div>
+                <div class="hero-card__meta">
+                  <div class="hero-card__line"></div>
+                  <div class="hero-card__text">
+                    <div class="hero-card__title">最新系列</div>
+                    <div class="hero-card__desc">克制网格 · 细微动效 · 干净排版</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="works">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title reveal">作品</h2>
+            <p class="section-subtitle reveal">摄影作品，以网格预览 + 详情查看。</p>
+          </div>
+          <div class="works-grid" id="worksGrid" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section class="section" id="resume">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title reveal">简历</h2>
+            <p class="section-subtitle reveal">在线展示 + 下载/外链。</p>
+          </div>
+
+          <div class="resume">
+            <div class="resume__actions reveal">
+              <a class="btn btn--primary" id="resumeDownload" href="#" target="_blank" rel="noreferrer">下载 PDF</a>
+              <a class="btn btn--ghost" id="resumeOnline" href="#" target="_blank" rel="noreferrer">在线查看</a>
+            </div>
+            <div class="resume__embed reveal" id="resumeEmbedWrap">
+              <div class="resume__placeholder">
+                <div class="resume__placeholder-title">简历预览</div>
+                <div class="resume__placeholder-desc">把你的简历 PDF 链接填到 `content.js` 后，这里会显示预览。</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="links">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title reveal">链接</h2>
+            <p class="section-subtitle reveal">社交入口与联系我。</p>
+          </div>
+          <div class="links" id="linksGrid"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__left">© <span id="year"></span> <span id="footerName">James</span></div>
+        <div class="footer__right">
+          <a class="footer__link" href="#home">回到顶部</a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal" id="modal" aria-hidden="true">
+      <div class="modal__backdrop" data-close="true"></div>
+      <div class="modal__panel" role="dialog" aria-modal="true" aria-label="作品预览">
+        <button class="modal__close" type="button" aria-label="关闭" data-close="true">×</button>
+        <button class="modal__nav modal__nav--prev" type="button" aria-label="上一张" id="modalPrev">‹</button>
+        <button class="modal__nav modal__nav--next" type="button" aria-label="下一张" id="modalNext">›</button>
+        <div class="modal__content">
+          <div class="modal__media" id="modalMedia"></div>
+          <div class="modal__meta">
+            <div class="modal__title" id="modalTitle"></div>
+            <div class="modal__desc" id="modalDesc"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./content.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>

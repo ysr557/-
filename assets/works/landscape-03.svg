@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="风景">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffdfbf"/>
+      <stop offset="1" stop-color="#ffd5dc"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#sky)"/>
+  <path d="M0 560c240-160 440-220 610-180 170 40 310 10 590-140v660H0z" fill="#29313a" opacity=".88"/>
+  <path d="M0 650c240-120 440-170 610-140 170 30 310 5 590-110v500H0z" fill="#2f3a45" opacity=".88"/>
+  <g>
+    <path d="M0 790c260-60 480-60 700 0 220 60 360 60 500 0v110H0z" fill="#65c9ff" opacity=".22"/>
+    <path d="M0 820c260-50 480-50 700 0 220 50 360 50 500 0" fill="none" stroke="#ffffff" stroke-opacity=".22" stroke-width="10"/>
+  </g>
+</svg>

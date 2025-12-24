@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="旅行">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c0aede"/>
+      <stop offset="1" stop-color="#ffd5dc"/>
+    </linearGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#65c9ff" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#b6e3f4" stop-opacity=".35"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#sky)"/>
+  <rect x="0" y="520" width="1200" height="380" fill="url(#sea)"/>
+  <path d="M0 540c260-120 480-120 660 0 150 100 310 100 540 0v360H0z" fill="#29313a" opacity=".88"/>
+  <path d="M0 640c260-90 480-90 660 0 150 80 310 80 540 0" fill="none" stroke="#ffffff" stroke-opacity=".22" stroke-width="10"/>
+  <g>
+    <path d="M220 760c40-110 120-170 230-190-80 70-110 130-120 210z" fill="#ffdfbf" opacity=".9"/>
+    <path d="M1000 760c-40-110-120-170-230-190 80 70 110 130 120 210z" fill="#ffdfbf" opacity=".75"/>
+  </g>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="风景">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b6e3f4"/>
+      <stop offset="1" stop-color="#ffffff"/>
+    </linearGradient>
+    <linearGradient id="lake" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#65c9ff" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#d1d4f9" stop-opacity=".45"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#sky)"/>
+  <path d="M0 560c260-160 480-200 700-120 200 72 330 40 500-120v580H0z" fill="#29313a" opacity=".88"/>
+  <path d="M0 640c260-120 480-150 700-90 200 56 330 30 500-90v440H0z" fill="#2f3a45" opacity=".85"/>
+  <rect x="0" y="630" width="1200" height="270" fill="url(#lake)"/>
+  <path d="M0 680c300-60 520-60 720 0 180 56 300 56 480 0" fill="none" stroke="#ffffff" stroke-opacity=".22" stroke-width="10"/>
+  <circle cx="200" cy="170" r="56" fill="#ffffff" opacity=".33"/>
+</svg>
